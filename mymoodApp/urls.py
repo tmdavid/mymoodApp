@@ -17,6 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from mymood.views.aboutview import about
 from mymood.views.welcomeview import welcomepage
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -24,3 +25,6 @@ urlpatterns = [
     url('^$',welcomepage),
     url('^about/$',about),
 ]
+
+
+urlpatterns += staticfiles_urlpatterns()

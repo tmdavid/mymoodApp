@@ -7,13 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="{% static "/styles.css" %}" />
+  <link rel="stylesheet" type="text/css" href="{% static "mymood/css/styles.css" %}" />
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{% static "mymood/js/changebackground.js" %}"></script>
 </head>
 <body>
     <div class = "container">
+        <button type="button" onclick="chBackground()">Click Me!</button>
         <div class = "row">
             <h1>
                 Promo video until web-release
