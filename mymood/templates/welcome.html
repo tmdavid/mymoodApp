@@ -13,28 +13,43 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{% static "mymood/js/changebackground.js" %}"></script>
 </head>
-<body>
-    <div class = "container">
-        <button type="button" onclick="chBackground()">Click Me!</button>
-        <div class = "row">
-            <h1>
-                Promo video until web-release
-            </h1>
-            <iframe width="640" height="480"
-                src="http://www.youtube.com/embed/gVN6FqPpChQ?autoplay=1">
-            </iframe>
-        </div>
-        <div class = "row">
-            <div class="col-md-8">
-                <p class="form-control-static">Tell us how you feel</p>
-            </div>
-        </div>
-        <div class = "row">
-            <div class="col-md-6">
-                <input class="form-control" id="focusedInput" type="text" value="Write your feelings here">
-            </div>
-        </div>
+<header>
+    <p class="form-control-static">Menu Again</p>
+</header>
+    <body>
+    <div class ="row">
+                <div class="col-md-3">
+                    <p class="form-control-static">Menu</p>
     </div>
+        <div class = "container">
+            <div class = "row">
+                <h1>
+                    Promo video until web-release
+                </h1>
+            </div>
+            <div class ="row">
+                <div class = "col-md-8">
+                    <iframe width="640" height="480"
+                        src="http://www.youtube.com/embed/gVN6FqPpChQ?autoplay=1">
+                    </iframe>
+                </div>
 
-</body>
+                <div class="col-md-4">
+                    <a class="twitter-timeline" href="https://twitter.com/your_mood_music" data-widget-id="604683588722937856">Tweets por el @your_mood_music.</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </div>
+            <div class ="row">
+                <div class="col-md-8">
+                    <p class="form-control-static">Tell us how you feel</p>
+                    <input class="form-control" id="focusedInput" type="text" value="Write your feelings here">
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+
+
+
 </html>
