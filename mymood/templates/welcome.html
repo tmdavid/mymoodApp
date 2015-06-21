@@ -12,40 +12,46 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{% static "mymood/js/changebackground.js" %}"></script>
+  <script type="text/javascript" src="{% static "mymood/js/getMood.js" %}"></script>
+
 </head>
 <header>
-    <p class="form-control-static">Menu Again</p>
+    <p class="form-control-static">{{ viewer }} next: {{nextviewer}}</p>
 </header>
     <body>
-    <div class ="row">
+        <div class ="row">
                 <div class="col-md-3">
                     <p class="form-control-static">Menu</p>
-    </div>
-        <div class = "container">
-            <div class = "row">
-                <h1>
-                    Promo video until web-release
-                </h1>
-            </div>
-            <div class ="row">
-                <div class = "col-md-8">
-                    <iframe width="640" height="480"
-                        src="http://www.youtube.com/embed/gVN6FqPpChQ?autoplay=1">
-                    </iframe>
                 </div>
+            </div>
+    <div class = "container">
+        <div class = "row">
+            <h1>
+               Promo video until web-release
+            </h1>
+        </div>
+        <div class ="row">
+             <div class = "col-md-8">
+                 <iframe width="640" height="480"
+                    src="http://www.youtube.com/embed/gVN6FqPpChQ?autoplay=1">
+                 </iframe>
+             </div>
 
-                <div class="col-md-4">
-                    <a class="twitter-timeline" href="https://twitter.com/your_mood_music" data-widget-id="604683588722937856">Tweets por el @your_mood_music.</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-            </div>
-            <div class ="row">
-                <div class="col-md-8">
-                    <p class="form-control-static">Tell us how you feel</p>
-                    <input class="form-control" id="focusedInput" type="text" value="Write your feelings here">
-                </div>
+            <div class="col-md-4">
+                <a class="twitter-timeline" href="https://twitter.com/your_mood_music" data-widget-id="604683588722937856">Tweets por el @your_mood_music.</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
         </div>
+        <div class ="row">
+            <div class="col-md-8">
+                <p class="form-control-static">Tell us how you feel</p>
+                <form method="POST" id="yourmoodform">{% csrf_token %}
+                    <textarea cols="35" rows="4" name="focusedInput" placeholder="Write your feelings here" value=""></textarea>
+                    <input type="submit" value="Ok!" style="width: 40px">
+                </form>
+            </div>
+        </div>
+    </div>
     </body>
 
 

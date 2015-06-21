@@ -1,0 +1,12 @@
+TODO
+Core
+    WebRefresh
+    Save new twits
+    sql database or graph neo4j
+    Dictionary {sentiment:{iterator:youtubestring}}
+    Compute Magic Algorithm
+
+Others
+    Save new songs
+    Retwit from web
+    Add twitter search for sentiment analysis
