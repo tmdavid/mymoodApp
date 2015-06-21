@@ -7,9 +7,15 @@ $('#yourmoodform').on('submit', function(event){
 
     event.preventDefault();
     console.log("form submitted!")  // sanity check
-    //create_post();
+    alert('do not reload');
+
+    create_post();
 });
 
-
+function create_post(form_var){
+    var text = document.getElementById("textform").value;
+    alert(text)
+    document.getElementById("Menu").value = text;
+}
 
 

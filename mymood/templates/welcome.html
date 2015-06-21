@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{% static "mymood/js/changebackground.js" %}"></script>
-  <script type="text/javascript" src="{% static "mymood/js/getMood.js" %}"></script>
+
 
 </head>
 <header>
@@ -21,7 +21,7 @@
     <body>
         <div class ="row">
                 <div class="col-md-3">
-                    <p class="form-control-static">Menu</p>
+                    <input type="text" id="Menu" value="Test Text">
                 </div>
             </div>
     <div class = "container">
@@ -45,17 +45,14 @@
         <div class ="row">
             <div class="col-md-8">
                 <p class="form-control-static">Tell us how you feel</p>
-                <form method="POST" id="yourmoodform">{% csrf_token %}
-                    <textarea cols="35" rows="4" name="focusedInput" placeholder="Write your feelings here" value=""></textarea>
+                <form action="" method="POST" id="yourmoodform">{% csrf_token %}
+                    <textarea cols="35" rows="4" name="focusedInput" id="textform" placeholder="Write your feelings here" value=""></textarea>
                     <input type="submit" value="Ok!" style="width: 40px">
                 </form>
             </div>
         </div>
     </div>
     </body>
-
-
-
-
-
 </html>
+<script type="text/javascript" src="{% static "mymood/js/getMood.js" %}"></script>
+
