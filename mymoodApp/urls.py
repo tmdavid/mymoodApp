@@ -17,13 +17,15 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from mymood.views.aboutview import about
 from mymood.views.welcomeview import welcomepage
+from mymood.views.welcomeview import create_post
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url('^yourmood/$', welcomepage),
-    url('^$',welcomepage),
-    url('^about/$',about),
+    url(r'^yourmood/$', welcomepage),
+    url(r'^$',welcomepage),
+    url(r'^about/$',about),
+    url(r'^create_post/$', create_post),
 ]
 
 

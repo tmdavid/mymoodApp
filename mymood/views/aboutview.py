@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 
 def about(request):
+    print 'about'
     #html = response.render(Context()) #inside the context place a dictionary and in the html {{ var_name }}
     t = get_template('about.html')
     html = t.render(Context())
