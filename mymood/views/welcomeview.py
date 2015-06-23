@@ -1,23 +1,27 @@
-from django.shortcuts import render
-from math import pi
-from django.template import Context
-from django.template import RequestContext
-from django.http import HttpResponse
-from django.template.loader import get_template
-import config
 import json
+
+
+from django.template import RequestContext
+from django.template.loader import get_template
+
+from mymood import config
+from mymood import const
+
 # Create your views here.
 
 from django.http import HttpResponse
 
+const.max_last_viewers = 5
 
 def append_last_viewers(data):
     print 'append_last_viewers'
     config.last_viewers.append(data)
-    print config.last_viewers
+    for viewer in config.last_viewers:
+        print viewer
     return True
 
 def welcomepage(request):
+
     if 'focusedInput' in request.POST:
         print request.POST['focusedInput']
         print len(request.POST['focusedInput'])
