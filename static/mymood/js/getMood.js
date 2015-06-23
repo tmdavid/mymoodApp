@@ -9,7 +9,7 @@ $(function() {
 
         event.preventDefault();
         console.log("form submitted!")  // sanity check
-        alert('do not reload');
+        //alert('do not reloadasdasdad');
 
         create_post();
     });
